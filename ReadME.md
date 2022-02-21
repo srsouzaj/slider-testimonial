@@ -13,3 +13,15 @@ As seguintes tecnologias foram utilizadas no projeto:
 
 
 <img src="https://i.ibb.co/Zx06cCR/image-20220221204657416.png" alt="image-20220221204657416" border="0">
+
+
+
+## :checkered_flag: Começando ##
+
+```bash
+# Clone this project
+$ git clone https://github.com/srsouzaj/slider-testimonial
+
+# Access
+$ cd slider-testimonial
+```
