@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="slide-container active">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="/person.jpg" alt="">
+                    <div class="user-info">
+                        <h3>John Doe</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text"> John Doe é um soldado brabo. Tão brabo que foram necessários 10 fotógrafos para fazer esse registro. Se você esta vendo essa foto, você é brabo.
+                </p>
+            </div>
+        </div>
+
+        <div class="slide-container">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="/person.jpg" alt="">
+                    <div class="user-info">
+                        <h3>Rafa Castanhari</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text"> Rafa Castanhari é um soldado brabo. Tão brabo que foram necessários 10 fotógrafos para fazer esse registro. Se você esta vendo essa foto, você é brabo.
+                </p>
+            </div>
+        </div>
+
+        <div class="slide-container">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="/person.jpg" alt="">
+                    <div class="user-info">
+                        <h3>Ziza Fernandes</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text"> Ziza é uma cantora braba. Tão brabo que foram necessários 10 fotógrafos para fazer esse registro. Se você esta vendo essa foto, você é brabo.
+                </p>
+            </div>
+        </div>
+        <div id="next" class="fas fa-chevron-right" onClick="next()"></div>
+        <div id="prev" class="fas fa-chevron-left" onClick="prev()"></div>
+
+    </div>
+
+    <script>
+        let slides = document.querySelectorAll('.slide-container');
+        let index = 0;
+
+        function next() {
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+
+        function prev() {
+            slides[index].classList.remove('active');
+            index = (index - 1 + slides.length) % slides.length;
+            slides[index].classList.add('active');
+        }
+    </script>
+
+</body>
+
+</html>
